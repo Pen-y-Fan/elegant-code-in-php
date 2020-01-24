@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
+ <div class="row">
+ <div class="col">
+ <div class="card">
+ <div class="card-header">Example</div>
+ <div class="card-body">
+ <?php if($name): ?>
+ <div class="alert alert-primary" role="alert">
+ <?php echo static::e($name); ?> is a nice name.
+ </div>
+ <?php else: ?>
+ <form method="post" class="form-inline">
+ <input type="text" class="form-control col-3"  name="name" value="">&nbsp;&nbsp;
+ <input type="submit" class="btn btn-primary" value="Send">
+ </form>
+ <?php endif; ?>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
